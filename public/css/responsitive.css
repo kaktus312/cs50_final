@@ -1,0 +1,100 @@
+/*высота строки однострочных полей формы*/
+/*ширина label в формах*/
+/*отступ label (на сторону)*/
+/*толщина рамки полей ввода*/
+/*отступ в полях ввода*/
+/*для 4-х в ряд*/
+@media (max-width: 505px) {
+  form label {
+    display: block;
+    width: 100%;
+    margin: 0 0 0 0;
+    float: none;
+    text-align: left;
+  }
+  form input,
+  form textarea {
+    width: 96%;
+    margin: 0 0 0 0;
+    float: none;
+  }
+}
+@media (max-width: 950px) {
+  .footer .content,
+  .header .content,
+  .main .content,
+  .content,
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  .header .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    float: none;
+  }
+  /*общее*/
+  .header .nav {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 372px;
+  }
+  /*end общее*/
+  .content {
+    text-align: center;
+  }
+  .teamBox .portrait {
+    width: 45.3125%;
+    margin: 0 7.5px;
+  }
+  .logo {
+    width: 100%;
+  }
+  .sl_wrapper {
+    display: none;
+  }
+  .pf_content {
+    width: 685.5px;
+  }
+}
+@media (min-width: 600px) and (max-width: 950px) {
+  .footer .content {
+    width: 600px;
+    overflow: hidden;
+  }
+  .footer .col-3 {
+    width: 50%;
+    float: left;
+  }
+}
+@media (max-width: 720px) {
+  .pf_content {
+    width: 457px;
+  }
+}
+@media (max-width: 490px) {
+  .pf_content {
+    width: 228.5px;
+  }
+  .teamBox .portrait {
+    width: 93.75%;
+    margin: 0 15px;
+  }
+}

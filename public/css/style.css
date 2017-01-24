@@ -1,0 +1,697 @@
+/*reset*/
+html * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ffffff;
+}
+a:focus,
+button:focus,
+button:active,
+input:focus {
+  outline: 0;
+}
+/*layout*/
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  font-family: "Times New Roman", serif;
+}
+#msg {
+  position: fixed;
+  display: none;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5em 0;
+  transition: all 0.25s ease-in-out 0s;
+  opacity: 0.85;
+  text-align: center;
+  z-index:10000;
+}
+.visible {
+  display: block!important;
+}
+.hidden {
+  display: none!important;
+}
+#msg.error {
+  background-color: #ff5650;
+}
+#msg.info {
+  background-color: #4f9a01;
+}
+#msg > .glyphicon-remove {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin: auto;
+  cursor: pointer;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+#msg:hover {
+  opacity: 1;
+}
+#msg .content ul {
+  list-style: none;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+}
+.main {
+  display: table-row;
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  /*по высоте формы авторизации*/
+}
+.footer .content,
+.header .content,
+.main .content,
+.content {
+  display: table;
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.main .content {
+  /*height: 100%;*/
+  /*для выравнивания повертикали блоков и форм*/
+}
+.col-12 {
+  width: 100%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-1 {
+  width: 8.33333333%;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+  overflow: hidden;
+  /*outline:solid 1px @alert_color;*/
+  text-align: justify;
+}
+.box {
+  margin: 0 15px 30px;
+  padding: 0 7.5px;
+  overflow: hidden;
+}
+/*styles*/
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+.inline-block {
+  display: inline-block;
+}
+.header {
+  background: url(../img/bg.jpg) repeat left top;
+  /*background: linear-gradient(to right, @drk_color, @lgh_color, @drk_color);*/
+  overflow: hidden;
+}
+.border {
+  height: 20px;
+  width: 100%;
+  background: #305d00 url(../img/bg_top_img.jpg) center top no-repeat;
+}
+.nav {
+  list-style: none;
+  overflow: hidden;
+  float: right;
+}
+.header .nav {
+  float: right;
+}
+.nav li {
+  float: left;
+  margin: 0.2em;
+}
+.header .nav li {
+  margin: 1em;
+}
+.nav li a,
+.logo {
+  color: #a8a8a8;
+  text-decoration: none;
+  display: block;
+  font-size: 1.4em;
+  text-align: center;
+  cursor: pointer-events;
+  font-style: normal;
+}
+.header .nav li a,
+.logo {
+  height: 3.5em;
+}
+.nav li a:hover {
+  color: #bbbbbb;
+}
+.active {
+  color: #4f9a01;
+}
+a:link {
+  color: #4f9a01;
+  font-style: italic;
+}
+.nav li a .glyphicon {
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+.nav li a span,
+.logo span {
+  display: block;
+}
+.description {
+  font-size: 0.6em;
+  color: #666666;
+}
+.logo {
+  width: 7em;
+  font-size: 3em;
+  display: block;
+  float: left;
+  height: auto;
+  padding-top: 0.18em;
+  color: #bbbbbb;
+}
+.logo .description {
+  font-size: 0.6em;
+}
+.small {
+  font-size: 0.4em;
+}
+.title {
+  border-bottom: solid 1px #e5e5e5;
+  margin-bottom: 0.5em;
+}
+/*портреты*/
+.teamBox {
+  padding: 0;
+}
+.teamBox ul {
+  overflow: hidden;
+}
+.portrait {
+  width: 200px;
+  margin: 0 16px;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+.portraitWrapp {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+.portrait img {
+  height: 100%;
+  position: absolute;
+}
+.portrait .descr {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0.5em 0;
+}
+.designer {
+  left: -20px;
+}
+.seo {
+  left: -60px;
+  top: 0px;
+}
+img.coder1 {
+  width: 100%;
+  height: auto;
+}
+.footer .title {
+  border: none;
+  margin: 0;
+}
+.footer {
+  background: url(../img/bg.jpg) repeat left bottom;
+  color: #696969;
+  margin-top: 30px;
+}
+.footer .wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.footer .title {
+  color: #fff;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 1.8em;
+}
+.footer ul li {
+  border-top: solid 1px #282828;
+  padding-left: 8px;
+  line-height: 1.4em;
+}
+.footer ul li:last-child {
+  border-bottom: solid 1px #282828;
+}
+.footer ul li a {
+  color: #696969;
+}
+.footer .list {
+  list-style-image: url(../img/marker_1.gif);
+  list-style-position: outside;
+  padding-left: 2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer .list li a {
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer .list li a:hover {
+  text-decoration: underline;
+}
+.light,
+a.light,
+.footer ul li a.light {
+  color: #fff;
+}
+#copyrights {
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  line-height: 1.5em;
+  padding: 1em 0;
+  margin-top: 1em;
+}
+#copyrights span {
+  display: block;
+}
+/*Формы*/
+form {
+  overflow: hidden;
+}
+form label {
+  width: 20%;
+  text-align: right;
+  font-style: italic;
+  float: left;
+  line-height: 2em;
+  margin-right: 2%;
+}
+form .alert {
+  display: block;
+  margin-left: 140px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.7em;
+  color: #ff5650;
+  display: none;
+}
+form .error {
+  border: solid 1px #ff5650;
+}
+form p {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 15px;
+}
+form input,
+form textarea {
+  width: 73%;
+  padding: 0 1.5%;
+  font-style: italic;
+  display: inline-block;
+  border: solid 1px #e5e5e5;
+  box-shadow: none;
+}
+form input,
+form select {
+  line-height: 2em;
+  height: 2em;
+}
+form textarea {
+  height: 19em;
+  padding: 7.5px;
+  width: 74.3%;
+}
+form button,
+.button {
+  padding: 5px 1em;
+  background-color: #4f9a01;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 7.5px;
+  color: #fff;
+}
+form button:hover {
+  background-color: #305d00;
+}
+form.fw input {
+  width: 100%;
+  margin-bottom: 7.5px;
+}
+form.fw button {
+  float: right;
+  background: linear-gradient(to top, #e5e5e5, #fdfdfd);
+  color: #000;
+}
+.central {
+  text-align: center;
+}
+.t-mar {
+  margin-top: 30px;
+}
+.b-mar {
+  margin-bottom: 30px;
+}
+.r-mar {
+  margin-right: 30px;
+}
+.l-mar {
+  margin-left: 30px;
+}
+/*цитаты*/
+.quote {
+  font-style: italic;
+  color: #696969;
+  max-height: 16em;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+}
+.quote span:first-child:before {
+  content: "\201c";
+}
+.quote span:first-child:after {
+  content: "\201d";
+}
+.quote span:last-child {
+  text-align: right;
+  display: block;
+  width: 80%;
+  float: right;
+}
+/*портфолио*/
+.pf_content {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pf_box {
+  overflow: hidden;
+  position: relative;
+  border: solid 1px #e5e5e5;
+  width: 226.5px;
+  height: 226.5px;
+  float: left;
+}
+.pf_box .pic {
+  height: 100%;
+}
+.pf_box img {
+  height: 100%;
+}
+.pf_box .title p,
+.pf_box .statusbar p {
+  padding: 0.25em 0.5em;
+  margin: 0;
+}
+.pf_box .title,
+.pf_box .statusbar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #282828;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.pf_box .title {
+  bottom: 0%;
+  height: 20%;
+  font-weight: bold;
+  text-align: center;
+}
+.pf_box .statusbar {
+  top: 0;
+  text-align: right;
+  opacity: 0.3;
+}
+.pf_box .statusbar p {
+  line-height: 1em;
+}
+.pf_box .statusbar {
+  transition: opacity 0.25s ease-in-out 0s;
+}
+.pf_box:hover .statusbar {
+  opacity: 1;
+}
+.pf_box a {
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*Закладки*/
+.tabsBlock {
+  margin: 30px 0 0 0;
+  position: relative;
+  opacity: 0.90;
+}
+.tabs {
+  margin: 0;
+  padding: 0 15px;
+  z-index: 2;
+  position: relative;
+  float: right;
+  list-style: none;
+}
+.tabs li {
+  margin: 0 0 -1px -1px;
+  padding: 7.5px;
+  border: solid 1px #e5e5e5;
+  background: #ffffff;
+  z-index: 2;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+.tabs li.active {
+  border-bottom-color: #ffffff;
+  border-bottom-width: 1px;
+  z-index: 3;
+  position: relative;
+  background: #ffffff;
+}
+.tabsContent {
+  border: solid 1px #e5e5e5;
+  clear: both;
+  margin: 0 15px 0;
+  padding: 15px;
+  z-index: 1;
+}
+/*login*/
+.full_сenter {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0!important;
+  float: none;
+  overflow: hidden;
+}
+#loginForm {
+  height: 200px;
+  width: 356px;
+  margin: auto;
+}
+/*карта*/
+#map-canvas {
+  height: 290px;
+}
+/*блок адреса*/
+dl,
+dl.address {
+  overflow: hidden;
+}
+dl dt,
+dl dt,
+dl.address dt,
+dl.address dd {
+  float: left;
+}
+dl dt,
+dl.address dt {
+  min-width: 80px;
+  clear: both;
+  color: #696969;
+  white-space: nowrap;
+  padding-right: 0.2em;
+}
+dl dd {
+  font-style: italic;
+}
+dd ul {
+  display: block;
+  clear: both;
+  padding-left: 2em;
+}
+.cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.pf_box .descr {
+  height: 300px;
+  padding: 0 15px;
+  outline: none;
+}
+.cPic {
+  width: 30%;
+  padding: 0.2em;
+  border: solid 1px #e5e5e5;
+  margin: 0.5em;
+}
+/*общие*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  margin: 1em auto 0.5em;
+}
+table {
+  width: 100%;
+  border: solid 1px #e5e5e5;
+  border-collapse: collapse;
+}
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 7.5px;
+}
+table td {
+  border: solid 1px #e5e5e5;
+  border-spacing: 0 0;
+}
+p {
+  margin-bottom: 1em;
+}
+/*админка*/
+.adm_tools {
+  text-align: center;
+}
+.adm_tools span {
+  cursor: pointer;
+  text-align: center;
+}
+.adm_tools span:hover,
+caption a:hover {
+  color: #ff5650;
+}
+.admTable td {
+  padding: 0.5em;
+}
+.admTable input,
+.admTable textfield {
+  width: 100%;
+  line-height: 2em;
+}
+caption a {
+  text-decoration: none;
+  padding-left: 1em;
+  color: #282828;
+  font-size: 1em;
+}
+/*popup forms*/
+.popup .content {
+  width: 100%;
+}
+.popup .content form {
+  border: solid 1px #e5e5e5;
+}
+.popup .content form label,
+.popup .content form input,
+.popup .content form textarea,
+.popup .content form select {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding:0;
+  
+}
+.popup .content form textarea {
+  height: 3em;
+}
