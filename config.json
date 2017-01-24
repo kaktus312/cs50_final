@@ -2,7 +2,7 @@
     "database": {
         "host": "localhost",
         "name": "final",
-        "username": "kaktus312",
-        "password": "zrrJ8zNEdpuTwuty"
+        "username": "input_user_name_here",
+        "password": "input_db_password_here"
     }
 }
